@@ -26,3 +26,12 @@ def test_rejeita_idade_acima_de_100():
     resultado = idade_permitida(idade)
     # Verificar
     assert resultado is False
+
+
+def test_rejeita_idade_nao_inteira():
+    # Preparar
+    idade = 12.5
+    # Agir
+    resultado = idade_permitida(idade)
+    # Verificar
+    assert resultado is False
